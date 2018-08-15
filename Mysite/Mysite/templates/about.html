@@ -1,0 +1,26 @@
+{% extends 'base.html' %}  <!-- extending base.html -->
+{% load staticfiles %}
+{% block content %} <!--using a dynamic data-->
+
+
+
+
+<section class="hero">
+    <div class="hero-inner">
+        <link rel="stylesheet" href="{% static 'style/background.css' %}" type="text/css" >
+            <figure>
+                <div class="gallery">
+                    <img src="{% static 'images/myself.png' %}" alt="" height="200" width="190">
+                    <figcaption> 
+                            <address>
+                                <strong>Rabin Bishaw Karma</strong><br>
+                                <strong>A software enthusiast who loves programming <br> Studies BSc.CSIT @ College Of Applied Business <br></strong><br>
+                            </address>
+                    </figcaption>
+                </div>
+            </figure> 
+    </div>
+</section> 
+    
+{% endblock %} <!--closing the block content-->
+

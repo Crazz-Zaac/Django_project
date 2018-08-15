@@ -1,0 +1,48 @@
+{% extends 'base.html' %}  <!-- extending base.html -->
+{% load staticfiles %}
+{% block content %} <!--using a dynamic data-->
+<div class="page-header">
+    <h1>{{ title }} </h1> <!--Displaying a header -->
+</div>
+
+<div class="row"> <!--using bootstrap for row and column-->
+    <!--There are altogether 12 columns__We can divide the layout amongs these 12 columns-->
+    <link rel="stylesheet" href="{% static 'style/truncate.css' %}" type="text/css" >
+    <div class="col-md-9"> <!--First column___column of medium size-9 -->
+        <div class="tab-content"> <!--First column-->
+
+            {% for article in articles %}  <!--referring to articles in views.py-->
+            <div id="{{ article.id }}" class="tab-pane fade 
+                {% if forloop.counter0 == 0 %}  
+                in active 
+                {% endif %}">
+                    <p>{{ article.content|safe }}</p> <!--accessing actual content -->
+            </div>
+            {% endfor %} <!--ending for loop-->
+        </div>
+    </div>
+
+    <div class="col-md-3"> <!--Second column of size 3-->
+        <ul class="nav nav-pills nav-stacked">
+            {% for article in articles %}
+            <li 
+            {% if forloop.counter0 == 0 %}
+            class="active"
+            {% endif %}
+            >
+                <a data-toggle="pill" href="#{{article.id}}">{{article.title}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<!-- facebook-comments -->
+<p><div class="fb-like" data-href="{{ request.build_absolute_url }}" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div><hr></p>
+<div class="fb-comments" data-href="{{ request.build_absolute_url }}" data-numposts="5"></div>
+
+{% endblock %} <!--closing the block content-->
+{% block body_block %}
+    <script>window.CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/';</script>
+    {{ block.super }}
+{% endblock %}

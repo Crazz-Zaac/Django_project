@@ -1,0 +1,19 @@
+{% extends 'base.html' %}  <!-- extending base.html -->
+{% load staticfiles %}
+
+{% block content %} <!--using a dynamic data-->
+
+<section class="hero">
+    <div class="hero-inner">
+        <link rel="stylesheet" href="{% static 'style/home.css' %}" type="text/css" > 
+        <h1>"A journey of a thousand miles begins with a single step"<sub> -Laozi</sub></h1>
+        <h2>It's never too late to begin anything</h2>
+        <a href="/Coding"><button class="btn"><span>Let's Begin!!</span></button></a>
+    </div>
+</section>
+<div class="content">
+    <p>Bytes Nepal, is a simple website developed with the motto of helping students and readers understand 
+    technical topics with reliable information. 
+    </p>
+</div>
+{% endblock %} <!--closing the block content-->

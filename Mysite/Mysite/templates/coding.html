@@ -1,0 +1,47 @@
+{% extends 'base.html' %}  <!-- extending base.html -->
+{% block content %} <!--using a dynamic data-->
+{% load staticfiles %}
+<div class="page-header">
+    <h1>{{ title }} </h1> <!--Displaying a header -->
+</div>
+
+<div class="row"> <!--using bootstrap for row and column-->
+    <!--There are altogether 12 columns__We can divide the layout amongs these 12 columns-->
+
+    <div class="col-md-9"> <!--First column___column of medium size-9 -->
+        <div class="tab-content"> <!--First column-->
+            <section class="hero">
+                <div class="hero-inner">
+                    <link rel="stylesheet" href="{% static 'style/prog.css' %}" type="text/css" >
+                    <h1 style="font-size:6vw">Coding makes you think</h1>
+                </div>
+            </section>
+            {% for language in languages %}  <!--referring to languages in views.py-->
+            <div id="{{ language.id }}" class="tab-pane fade 
+                {% if forloop.counter0 == 0 %}  
+                in active   
+                {% endif %}"> <!--first article is being active by default-->
+                    <p>{{ language.content|safe }}</p> <!--accessing actual content -->
+            </div>
+            {% endfor %} <!--ending for loop-->
+        </div>
+    </div>
+
+    <div class="col-md-3"> <!--Second column of size 3-->
+        <ul class="nav nav-pills nav-stacked">
+            {% for language in languages %}
+            <li 
+            {% if forloop.counter0 == 0 %}
+            class="active"
+            {% endif %}
+            >
+                <a data-toggle="pill" href="#{{ language.id }}">{{language.title}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<p><div class="fb-like" data-href="{{ request.build_absolute_url }}" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div><hr></p>
+<div class="fb-comments" data-href="{{ request.build_absolute_url }}" data-numposts="5"></div>
+
+{% endblock %} <!--closing the block content-->

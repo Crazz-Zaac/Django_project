@@ -1,0 +1,133 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <link href="http://getbootstrap.com/docs/3.3/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+        
+        
+</head>
+<body>
+    
+
+    <nav class="navbar navbar-default navbar-fixed-top"> <!--Navigation bar at the top-->
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" > <!--state changes with this button-->
+                    <span class="sr-only">Toggle Navigation</span>                        
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div id="navbar" class="collpase navbar-collapse">
+                <nav class="navbar navbar-inverse">
+                    <a class="navbar-brand" href="/"><img src="{% static 'images/brand-logo.png' %}"/></a>
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                       
+                        <div class="centeredlogo">
+                            <nav class="navbar navbar-light bg-light">
+                            </nav> 
+                        </div>
+                    </div>
+                <ul class="nav navbar-nav"> <!--For, About, Home and other items at the top-->
+                    <!--active__It means only one of the page is active at a time-->
+                    <!--href__navigates to that page-->
+                    <li class="active"><a href="/">HOME</a> <!--Navigates to default homepage--></li>                 
+                    
+                    <li><a href="/News">NEWS</a> <!--Navigates to News page--></li> 
+                    
+                    <li><a href="/Coding">CODING</a> <!--Navigates to Programming page--></li>
+                    
+                    <li><a href="/Materials">STUDY MATERIALS</a> <!--Navigates to Study Materials page--></li>
+
+                    <!--href__navigates to /About page-->
+                    <li><a href="/About">ABOUT</a> <!--Navigates to default About page--></li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div class="container"> 
+        {% block content %} <!--calling content-->
+                           <!--substituting an index class content-->
+        {% endblock %}
+        
+    </div>
+    
+    
+
+    <style>
+        footer {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            background-color: whitesmoke;
+        }
+
+        p.copyright {
+            position: absolute;
+            width: 100%;
+            color: rgb(0, 0, 0);
+            line-height: 30px;
+            font-size: 1em;
+            text-align: center;
+            bottom:0;
+        }
+    </style>
+   
+    <footer class="footer">
+        <div class="container">                          
+            <div class="social-media-icons col-xs-14">
+                <ul class="list-inline col-xs-12">
+                    <a href="https://plus.google.com/u/0/118145657147121187915"><i class="fa fa-google-plus-square fa-10x" title="Google plus" style="font-size:30px;color:#dd4b39"></i></a>
+                    &nbsp;&nbsp;
+                    <a href="https://www.facebook.com/crazz.z.zaac"><i class="fa fa-facebook-square fa-10x" title="Facebook" style="font-size:30px;color: #3B5998"></i></a>
+                    &nbsp;&nbsp;
+                    <a href="https://bitbucket.org/Rabin_BK/"><i class="fa fa-bitbucket fa-10x" title="Bitbucket" style="font-size:30px;color:#205081"></i></a>
+                    &nbsp;&nbsp;
+                    <a href="https://www.linkedin.com/in/rabin-bk-a36557126/"><i class="fa fa-linkedin fa-10x" title="Linked in" style="font-size:30px;color:#0077B5"></i></a>               
+                </ul>
+            </div>  
+            <br>                      
+            <p class="text-muted">
+                {{ current_date }} <!--coming from views.py-->
+            </p>               
+        </div>
+        <p class="copyright">© Bytesnepal. All rights reserved.
+        </p>
+    </footer>
+    <div id="fb-root"></div>
+
+
+    <!-- scripts -->
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script
+		src="http://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+from django.contrib import admin
+from django import forms
+from .models import Article
+from .models import Language
+
+
+
+class PostAdmin(admin.ModelAdmin):                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+    list_display = ('id','title')
+    list_filter = ('title','content')
+    search_fields = ('title','content')
+
+
+admin.site.register(Article,PostAdmin)
+admin.site.register(Language,PostAdmin)
