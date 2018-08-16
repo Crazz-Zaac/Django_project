@@ -11,6 +11,13 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Mysite.settings")
 
-application = get_wsgi_application()
+
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Mysite.settings")
+#application = 
+from whitenoise import WhiteNoise
+application = WhiteNoise(get_wsgi_application())
+
+#Use whitenoise package to serve static files on Heroku
