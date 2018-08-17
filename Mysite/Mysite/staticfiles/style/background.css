@@ -1,0 +1,29 @@
+.hero{
+    /* Sizing */
+    width: 86.5vw;
+    height: 100vh;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: inherit;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: 2000px;
+    color: white;
+    
+    /* Background styles */
+    background-image: url('/static/images/night.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.hero h1{
+    /*Text styles*/
+    font-size: 5em;
+
+    /*margins*/
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
