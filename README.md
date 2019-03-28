@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 ```python3 
 django 
 virtual environment
-and a text editor(visual studio, sublime text, vim, atom)
+Text editor(visual studio, sublime text, vim, atom)
 Heroku
 Git hub
 ```
@@ -34,6 +34,6 @@ This project is licensed under the MIT License - see the [MIT](https://chooseali
 ## Acknowledgements
 I express my gratitude to this person who helped me a lot throughout this project.
 
-Markup : * [Shital Babu Luitel](https://github.com/shitalluitel?tab=repositories)
+[Shital Babu Luitel](https://github.com/shitalluitel?tab=repositories)
 
 
