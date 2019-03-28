@@ -1,7 +1,7 @@
-### Development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner
+Development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner
 
 # Bytes Nepal
-This is a very minimalistic version of a website. I designed taking references from different videos and online tutorials. This is indeed my first django project. I had no idea what was going on but through debugging I learnt a lot and had successfully through this project. It was absolutely a challenging and exciting journey. I have done very less or almost not done much with the database. Because my finals were round the corne, I could not give a good ending. I have worked more on the backend than the UI. Actually I had thought of creating a simple blog app but what swung me back is the price of the server for hosting a website.
+This is a very minimalistic version of a website that you can see it [here](https://bytesnepal.herokuapp.com/). I designed taking references from different videos and online tutorials. This is indeed my first django project. I had no idea what was going on but through debugging I learnt a lot and had successfully through this project. It was absolutely a challenging and exciting journey. I have done very less or almost not done much with the database. Because my finals were round the corne, I could not give a good ending. I have worked more on the backend than the UI. 
 
 ## Getting started 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. 
@@ -28,11 +28,11 @@ For deploying I recommend [Heroku](https://www.heroku.com/). Click the link to k
 
 
 ## License
-This project is licensed under the MIT License - see the [MIT] (https://choosealicense.com/licenses/mit/#) link for details
+This project is licensed under the MIT License - see the [MIT](https://choosealicense.com/licenses/mit/#) link for details
 
 
 ## Acknowledgements
 I express my gratitude to this person who helped me a lot throughout this project.
 Markup : * [Shital Babu Luitel](https://github.com/shitalluitel?tab=repositories)
 
-Markup : ![picture alt](https://bytesnepal.herokuapp.com/)
+
